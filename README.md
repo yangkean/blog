@@ -15,3 +15,4 @@
 
 * [谈谈 git-flow](https://github.com/yangkean/blog/issues/2)
 * [初识 parcel](https://github.com/yangkean/blog/issues/3)
+* [有只老鼠叫 EditorConfig](https://github.com/yangkean/blog/issues/4)
