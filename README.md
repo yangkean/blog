@@ -7,6 +7,7 @@
 #### 基础
 
 * [如何在 JavaScript 中拷贝对象](https://github.com/yangkean/blog/issues/1)
+* [用 ArrayBuffer 来截取二进制数据中的字符](https://github.com/yangkean/blog/issues/5)
 
 #### 工具
 
