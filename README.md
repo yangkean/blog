@@ -16,3 +16,4 @@
 * [有只老鼠叫 EditorConfig](https://github.com/yangkean/blog/issues/4)
 * [Sass 入门](https://github.com/yangkean/blog/issues/6)
 * [Pug 常用点归纳](https://github.com/yangkean/blog/issues/7)
+* [Stylus 笔记](https://github.com/yangkean/blog/issues/8)
