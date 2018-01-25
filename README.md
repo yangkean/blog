@@ -8,6 +8,7 @@
 
 * [如何在 JavaScript 中拷贝对象](https://github.com/yangkean/blog/issues/1)
 * [用 ArrayBuffer 来截取二进制数据中的字符](https://github.com/yangkean/blog/issues/5)
+* [谈谈 ES7、ES8、ES9 和 Stage 3 的那些事儿](https://github.com/yangkean/blog/issues/9)
 
 #### 工具
 
