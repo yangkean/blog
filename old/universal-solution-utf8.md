@@ -68,8 +68,10 @@ UTF-8 的编码规则如下：
 | 000800 - 00D7FF 及 00E000 - 00FFFF  | 00000000 xxxxyyyy yyzzzzzz | 1110xxxx 10yyyyyy 10zzzzzz |
 | 010000 - 10FFFF | 000wwwxx xxxxyyyy yyzzzzzz | 11110www 10xxxxxx 10yyyyyy 10zzzzzz |
 
- Unicode 标量值：包含 0 到 D7FF16 以及 E000 to 10FFFF 的所有码位值 
- Unicode在范围 D800 - DFFF 中不存在任何字符，基本多语言平面中约定了这个范围用于 UTF-16 扩展标识辅助平面
+ 注：
+ 
+ * Unicode 标量值：包含 0 到 D7FF16 以及 E000 to 10FFFF 的所有码位值
+ * Unicode在范围 D800 - DFFF 中不存在任何字符，基本多语言平面中约定了这个范围用于 UTF-16 扩展标识辅助平面
 
 上表中第一个范围 ( 1 个字节) 的 UTF-8 编码格式正好对应于 7 比特的 ASCII 字符，这样就与 ASCII 兼容了，使得原来处理 ASCII 字符的软件无需或只需做少量修改就可继续使用。而对于 n 字节 (n > 1) 字符，UTF-8 的编码格式为第一个字节的前 n 位为 1，第 n + 1 位为 0，后面字节的前两位均为 10，其他位置则像上表一样按 Unicode 标量值的二进制形式从左到右逐个填充。
 
