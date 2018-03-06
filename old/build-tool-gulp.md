@@ -2,6 +2,8 @@
 
 ## 前言
 
+> **Update (2018.3.6)**: 因为这篇文章是较久之前写的了，gulp 的 API 也发生了变化，具体可到 [gulp](https://github.com/gulpjs/gulp) 查看。
+
 其实好早前就用过 gulp 了，不过之前都是都是用别人配置好的，我直接执行个 `gulp` 就好了，最近才重新里里外外搞了下这个工具 orz。另外，本文并不涉及 Java 世界的 Gradle 等构建工具以及其他世界或者一些更老的构建工具。
 
 *   [基于流的自动化构建工具 —— gulp](#%E5%9F%BA%E4%BA%8E%E6%B5%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7-gulp)
@@ -92,7 +94,7 @@ gulp 的一些优点:
 
 ## 一起来使用 gulp 吧
 
-使用 gulp 需要先安装 node，你当然可以去 [官网](https://nodejs.org/zh-cn/) 下载相应版本，然后在你的电脑里安装，但是 node 更新得很快，需要换版本的时候又要去官网下，很麻烦，我推荐使用 [nvm](https://github.com/creationix/nvm) (*node package manager*)，这个 node 包管理器不仅可以在你的 shell 里远程指定安装任意 node 版本，还可以自由切换使用安装好的版本，相当方便。
+使用 gulp 需要先安装 node，你当然可以去 [官网](https://nodejs.org/zh-cn/) 下载相应版本，然后在你的电脑里安装，但是 node 更新得很快，需要换版本的时候又要去官网下，很麻烦，我推荐使用 [nvm](https://github.com/creationix/nvm) (*node version manager*)，这个 node 包管理器不仅可以在你的 shell 里远程指定安装任意 node 版本，还可以自由切换使用安装好的版本，相当方便。
 
 在 shell 中执行：
 
@@ -156,7 +158,7 @@ npm install --save-dev gulp-uglify
 
 1.  gulp.src(globs[, options])
 
-    `globs` 是匹配模式，可以是匹配模式的支付串或匹配模式支付串的数组，用于匹配读入的文件名，`options` 为附加选项，`options` 类型为 Object，详情参见 [gulp-src](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpsrcglobs-options) 。
+    `globs` 是匹配模式，可以是匹配模式的字符串或匹配模式字符串的数组，用于匹配读入的文件名，`options` 为附加选项，`options` 类型为 Object，详情参见 [gulp-src](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpsrcglobs-options) 。
 
 2.  gulp.dest(path[, options])
 
