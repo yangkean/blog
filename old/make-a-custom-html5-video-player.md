@@ -175,7 +175,7 @@ document.addEventListener('onfullscreenchange', callback, false);
 
 ### 毒三：全屏的实现原理竟然不一样
 
-*Firefox* 的渲染引擎 *Gecko* 和 *Blink (Chrome & Opera) / Edge / WebKit (Safari)*系列的渲染引擎在实现全屏的原理上是不同的。*Gecko* 只是单纯地把元素撑大到占满整个屏幕，被撑大元素的兄弟 (*siblings*) 仍然相对被撑大元素的父亲 (*parent*) 来布局且会被撑大元素覆盖。*Blink (Chrome & Opera) / Edge / WebKit (Safari)* 系列则是撑大元素但其兄弟是相对撑大的元素来布局的。博主的实现中控制栏是作为 `<video>` 元素的兄弟而存在的，所以后者的表现方式不会出问题，反而在 *Firefox* 上我的控制栏被覆盖了。这个时候，可以将 `video` 元素和其兄弟放到一个 `div` 元素中，对于 *Firefox* 就撑大这个 `div` 元素，对于其他渲染引擎则撑大 `div` 下的 `video` 元素。如果你是其他实现，可以参考 *[presention differences](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Presentation_differences)*。
+*Firefox* 的渲染引擎 *Gecko* 和 *Blink (Chrome & Opera) / Edge / WebKit (Safari)* 系列的渲染引擎在实现全屏的原理上是不同的。*Gecko* 只是单纯地把元素撑大到占满整个屏幕，被撑大元素的兄弟 (*siblings*) 仍然相对被撑大元素的父亲 (*parent*) 来布局且会被撑大元素覆盖。*Blink (Chrome & Opera) / Edge / WebKit (Safari)* 系列则是撑大元素但其兄弟是相对撑大的元素来布局的。博主的实现中控制栏是作为 `<video>` 元素的兄弟而存在的，所以后者的表现方式不会出问题，反而在 *Firefox* 上我的控制栏被覆盖了。这个时候，可以将 `video` 元素和其兄弟放到一个 `div` 元素中，对于 *Firefox* 就撑大这个 `div` 元素，对于其他渲染引擎则撑大 `div` 下的 `video` 元素。如果你是其他实现，可以参考 *[presention differences](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Presentation_differences)*。
 
 好，下一个问题 :)
 
@@ -219,7 +219,7 @@ https://jsfiddle.net/YangKean/uch3sfch/3/embedded/js,html,css,result/dark/
 
 就弹幕功能来说，还有很多需要做，例如暂停、继续、弹幕的着色、顶部弹幕和滚动弹幕的处理等等，可以说这是一个最复杂的功能了，需要耐心地写。
 
-还有啊，话说，同样是苹果的产品，*Safari* 和 *MacBook*、*iPhone* 的差距真不是一般大，在写这个播放器的时候，好几次都被 *Safari* 莫名地坑了，打开控制台再切换到全屏的时候竟然崩了，有时甚至感觉 *Safari* 已经仅此于 *IE* 了，不过据说 *Safari* 退居苹果产品二线了，就算了 :)。
+还有啊，话说，同样是苹果的产品，*Safari* 和 *MacBook*、*iPhone* 的差距真不是一般大，在写这个播放器的时候，好几次都被 *Safari* 莫名地坑了，打开控制台再切换到全屏的时候竟然崩了，有时甚至感觉 *Safari* 已经仅次于 *IE* 了，不过据说 *Safari* 退居苹果产品二线了，就算了 :)。
 
 基于播放器的特殊，尤其需要考虑优化性能，否则运行起来而且弹幕量大的时候，简直惨不忍睹。用 *cssText* 合并多条需要动态改变的 *css* 属性，非动态的又有很多条属性的修改应该统一放到 *css* 文件中，再用 *class* 属性来修改元素的样式，尽最大努力减少页面的重排 (*reflow*) 和 重绘 (*repaint*)。
 
