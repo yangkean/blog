@@ -11,7 +11,7 @@
 ## 更富含语义的标签
 
 HTML5新定义了很多富含语义的新标签，比如新的节 (*section*) 元素 `<section>`、`<hgroup>`、 `<article>`、`<nav>`、`<header>`、`<footer>` 和 `<aside>`，在定义不同的节 (*section*) 内容上很有帮助，也无需
-担忧浏览器的支持，由 [*New semantic elements*](http://caniuse.com/#feat=html5semantic) 可以看到，除了 *IE 8* 即以下不支持 *html5* 新标签，其他所有浏览器都基本支持了。对于 *IE 8* 及以下版本，*html5* 标签和其他自定义标签会被当作 *HTMLUnknownElement*，而且会有一堆问题，想要兼容 *IE 8* 及以下版本的可以参考 [这里](http://diveintohtml5.info/semantics.html#unknown-elements) 解决。对于其他浏览器，是否可以用自定义的标签来丰富语义？是可以的，但要注意以下几点：
+担忧浏览器的支持，由 [*New semantic elements*](http://caniuse.com/#feat=html5semantic) 可以看到，除了 *IE 8* 及以下不支持 *html5* 新标签，其他所有浏览器都基本支持了。对于 *IE 8* 及以下版本，*html5* 标签和其他自定义标签会被当作 *HTMLUnknownElement*，而且会有一堆问题，想要兼容 *IE 8* 及以下版本的可以参考 [这里](http://diveintohtml5.info/semantics.html#unknown-elements) 解决。对于其他浏览器，是否可以用自定义的标签来丰富语义？是可以的，但要注意以下几点：
 
 1. 所有的浏览器都会默认把 *unknown elements* 渲染为内联元素，要用块级元素要自己修改 `display` 值
 2. 标签应该使用连字符避免与以后标准文档的标签冲突，比如 `<quite-good>`
